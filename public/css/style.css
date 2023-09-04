@@ -6,8 +6,8 @@
 }
 header{
     background-color: #EAC926;
-    
 }
+
 body{
     background-color: #ebebeb;;
     font-size: 12px;
@@ -94,22 +94,30 @@ h3{
 }
 .descuentos{
     font-size: 16px;
+    font-weight: bold;
 }
 .descripcion{
     font-size: 16px;
+}
+.precios, .descuentos {
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between; 
 }
 h3,
 .descripcion{
     color: #666;
 }
 
-/* Estilo general */
+
 main {
     width: 90%;
     margin: 0 auto;
   }
-  
-  /* Estilo para la sección "Ultimas Visitas" */
+
+  .main-article {
+    position: relative;
+  }
   .ultimas-vis {
     background-color: #f0f0f0;
     padding: 20px;
@@ -132,20 +140,20 @@ main {
     margin-bottom: 20px;
     padding: 10px;
     display: flex;
-    flex-direction: column; /* Cambiamos la dirección a columna para que el icono esté arriba */
+    flex-direction: column;
   }
   
   .ultimas-vis article img {
     width: 100%;
   }
   
-  /* Estilo para el contenedor de los elementos de precio, descuento y descripción */
+  
   .ultimas-vis article .main-article {
     display: flex;
-    flex-direction: column; /* Mantenemos la dirección como columna */
+    flex-direction: column; 
   }
   
-  /* Estilo para el icono de la camioneta */
+  
   .ultimas-vis article i {
     display: block;
     font-size: 16px;
@@ -155,32 +163,32 @@ main {
     border: 1px solid #39b54a;
     background-color: #fafafa;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     text-align: center;
     color: #39b54a;
-     /* Margen inferior para separar el icono del precio */
+    right: 0;;
+    top: -15px;
   }
   
   
-  /* Estilo para precios */
+  
   .precios {
     font-weight: bold;
     color: #333;
   }
   
-  /* Estilo para descuentos */
   .descuentos {
     color: #39b54a;
     font-weight: bold;
   }
   
-  /* Estilo para descripciones */
+
   .descripcion {
     color: #777;
   }
   
   
-  /* Estilo para la sección "Ofertas" */
+ 
   .ofertas {
     background-color: #f0f0f0;
     padding: 20px;
@@ -196,20 +204,18 @@ main {
     margin-bottom: 20px;
     padding: 10px;
     display: flex;
-    flex-direction: column; /* Cambiamos la dirección a columna para que el icono esté arriba */
+    flex-direction: column; 
   }
   
   .ofertas article img {
     width: 100%;
   }
   
-  /* Estilo para el contenedor de los elementos de precio, descuento y descripción */
   .ofertas article .main-article {
     display: flex;
     flex-direction: column; /* Mantenemos la dirección como columna */
   }
   
-  /* Estilo para el icono de la camioneta */
   .ofertas article i {
     display: block;
     font-size: 16px;
@@ -222,7 +228,6 @@ main {
     position: relative;
     text-align: center;
     color: #39b54a;
-     /* Margen inferior para separar el icono del precio */
   }
  
  /* FOOOOOOOOOOOOOOOTEEEEEEEEEERR*/ 
@@ -252,7 +257,6 @@ div.icono{
 
 
   @media screen and (max-width: 360px) {
-    /* Ocultar la descripción del artículo */
     .descripcion {
       display: none;
     }
@@ -273,7 +277,6 @@ div.icono{
   }
   }
   
-  /* Estilo para tablets (ancho mínimo de 361px) */
   @media screen and (min-width: 361px) {
     .ultimas-vis article,
     .ofertas article {
@@ -291,7 +294,6 @@ div.icono{
     display: block;
   }
 
-  /* Ocultar la imagen del menú hamburguesa */
   .burger-menu {
     display: none;
   }
